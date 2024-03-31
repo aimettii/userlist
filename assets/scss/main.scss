@@ -1,0 +1,57 @@
+@import "~/components/sidebar";
+@import "~/components/userCard";
+@import "~/components/rating";
+
+body {
+  background: #e1e1e1;
+}
+
+button {
+  outline: none;
+  border: none;
+}
+
+h1, h2, h3, h4, h5 {
+  margin: 0;
+}
+
+.b-page {
+  height: 100vh;
+  width: 100%;
+  margin-left: calc(#{$space-3} * 6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: $transition-sidebar;
+  transform: none;
+}
+
+@media screen and (max-width: 560px) {
+  .b-page {
+    margin-left: 60px !important;
+  }
+}
+
+.b-layout {
+  width: 100vw;
+  display: flex;
+}
+
+.b-layout--collapsed-sidebar {
+  .b-page {
+    margin-left: calc(#{$space-3} * 6 - 220px);
+  }
+}
+
+.b-button {
+  height: 50px;
+  background: #007aff;
+  border-radius: 6px;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+  width: 100%;
+  &:hover {
+    opacity: .6;
+  }
+}
